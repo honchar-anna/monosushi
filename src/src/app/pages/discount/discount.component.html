@@ -1,0 +1,37 @@
+<header>
+    <div>
+        <div class="blue-line"></div>
+        <h1>Акції</h1>
+    </div>
+</header>
+
+<div class="container mt-3 mb-3">
+    <div class="main-container row">
+        <ng-container *ngIf="userDiscount.length>0">
+            <div class="col-6 mt-3 main-container__box" *ngFor="let discount of userDiscount">
+                <a class="card w-100  no-border" [routerLink]="[ '/discount', discount.id]">
+                    <div class="card__img-cont card-img">
+                        <img [src]="discount.imagePath" class="card__img-cont__card-img" style="background-size: 110%">
+                    </div>
+                    <div class="card-name">{{ discount.name|uppercase }}</div>
+                    <div class="card-body text-center">
+                        <a href="#" class="btn btn-style" [routerLink]="[ '/discount', discount.id]">ДІЗНАТИСЬ
+                            БІЛЬШЕ</a>
+                    </div>
+                </a>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="userDiscount.length === 0">
+            <div class="card text-center">
+                <div class="card-header">
+                </div>
+                <div class="card-body">
+                    <h1>Наразі акцій немає</h1>
+                </div>
+                <div class="card-footer text-muted">
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+</div>
