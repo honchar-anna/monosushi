@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "mono-sushi-71c3a",
+    "y": "monosushi-e1bb2",
+    "mono-sushi": "mono-sushi-71c3a"
+  },
+  "targets": {},
+  "etags": {}
+}
